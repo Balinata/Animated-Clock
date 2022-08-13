@@ -3,50 +3,55 @@
 ::before {
     box-sizing: border-box;
 }
+
 body {
     margin: 0;
     padding: 0;
     background: 262626;
 }
+
 #wrapper {
     position: relative;
     width: 100%;
     overflow: hidden;
 }
+
 .clock {
-position: absolute;
-top: 50%;
-left: 50%;
-transform: translate(-50%, -50%);
-width: 200px;
-height: 200px;
-border: 15px solid black;
-border-radius: 50%;
-box-shadow: -2px 1px 0 #837e7e, inset 0 0 20px rgba(0,0,0,0.5);
-background: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 200px;
+    height: 200px;
+    border: 15px solid black;
+    border-radius: 50%;
+    box-shadow: -2px 1px 0 #837e7e, inset 0 0 20px rgba(0, 0, 0, 0.5);
+    background: white;
 }
+
 .clock:before {
-content: '';
-position: absolute;
-top: calc(50% - 3px);
-left: 50%;
-width: 40%;
-height: 6px;
-background: black;
-border-radius: 3px;
-animation: animate 4s linear infinite;
-transform-origin: left;
+    content: '';
+    position: absolute;
+    top: calc(50% - 3px);
+    left: 50%;
+    width: 40%;
+    height: 6px;
+    background: black;
+    border-radius: 3px;
+    animation: animate 4s linear infinite;
+    transform-origin: left;
 }
+
 @keyframes animate {
-0%
-{
-transform: rotate(0deg);
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
 }
-100%
-{
-transform: rotate(360deg);
-}
-}
+
 .clock::after {
     content: '';
     position: absolute;
@@ -58,4 +63,4 @@ transform: rotate(360deg);
     border-radius: 3px;
     animation: animate 48s linear infinite;
     transform-origin: left;
-    }
+}
