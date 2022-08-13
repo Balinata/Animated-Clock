@@ -21,4 +21,16 @@ transform: translate(-50%, -50%);
 width: 200px;
 height: 200px;
 border: 15px solid black;
+border-radius: 50%;
+box-shadow: -2px 1px 0 #837e7e, inset 0 0 20px rgba(0,0,0,0.5);
+background: white;
+}
+.clock:before {
+content: '';
+position: absolute;
+top: calc(50% - 3px);
+left: 50%;
+width: 40%;
+height: 6px;
+background: 262626;
 }
