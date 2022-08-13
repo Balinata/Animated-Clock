@@ -32,5 +32,30 @@ top: calc(50% - 3px);
 left: 50%;
 width: 40%;
 height: 6px;
-background: 262626;
+background: black;
+border-radius: 3px;
+animation: animate 4s linear infinite;
+transform-origin: left;
 }
+@keyframes animate {
+0%
+{
+transform: rotate(0deg);
+}
+100%
+{
+transform: rotate(360deg);
+}
+}
+.clock::after {
+    content: '';
+    position: absolute;
+    top: calc(50% - 3px);
+    left: 50%;
+    width: 30%;
+    height: 6px;
+    background: black;
+    border-radius: 3px;
+    animation: animate 48s linear infinite;
+    transform-origin: left;
+    }
