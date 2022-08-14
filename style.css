@@ -3,19 +3,16 @@
 ::before {
     box-sizing: border-box;
 }
-
 body {
     margin: 0;
     padding: 0;
     background: 262626;
 }
-
 #wrapper {
     position: relative;
     width: 100%;
     overflow: hidden;
 }
-
 .clock {
     position: absolute;
     top: 50%;
@@ -23,12 +20,12 @@ body {
     transform: translate(-50%, -50%);
     width: 200px;
     height: 200px;
-    border: 15px solid black;
+    /* border: 15px solid black;
     border-radius: 50%;
-    box-shadow: -2px 1px 0 #837e7e, inset 0 0 20px rgba(0, 0, 0, 0.5);
-    background: white;
+    box-shadow: -2px 1px 0 #837e7e, inset 0 0 20px rgba(0, 0, 0, 0.5); */
+    background: url(./images/clockface.jpg);
+    background-size: cover;
 }
-
 .clock:before {
     content: '';
     position: absolute;
@@ -41,17 +38,27 @@ body {
     animation: animate 4s linear infinite;
     transform-origin: left;
 }
-
+span {
+display: block;
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%,-50%);
+width: 10px;
+height: 10px;
+background: red url(./images/sechand.png);
+background-size: cover;
+border-radius: 50%;
+z-index: 1;
+}
 @keyframes animate {
     0% {
-        transform: rotate(0deg);
+        transform: rotate(-90deg);
     }
-
     100% {
-        transform: rotate(360deg);
+        transform: rotate(270deg);
     }
 }
-
 .clock::after {
     content: '';
     position: absolute;
