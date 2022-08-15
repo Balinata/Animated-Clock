@@ -61,7 +61,6 @@ body {
     0% {
         transform: rotate(-90deg);
     }
-
     100% {
         transform: rotate(270deg);
     }
@@ -71,8 +70,12 @@ body {
     transform-origin: 50% 90%;
 }
 @keyframes spin {
-   from { transform: rotate(0deg); }
-   to { transform: rotate(360deg); }
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
 }
 .clock::after {
     content: '';
