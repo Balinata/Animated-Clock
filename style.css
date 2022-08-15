@@ -52,8 +52,8 @@ body {
     top: 5%;
     left: 49%;
     width: 4px;
+    margin: 20px 0px;
     height: 89px;
-    margin-top: 20px;
     border-radius: 41px;
     background: #f00;
     z-index: 1;
@@ -67,6 +67,14 @@ body {
         transform: rotate(270deg);
     }
 }
+.hand {
+    animation: spin 60s linear infinite;
+    transform-origin: 50% 90%;
+}
+/* @keyframes  {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+ } */
 .clock::after {
     content: '';
     position: absolute;
