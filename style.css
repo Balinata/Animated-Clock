@@ -3,16 +3,19 @@
 ::before {
     box-sizing: border-box;
 }
+
 body {
     margin: 0;
     padding: 0;
     background: 262626;
 }
+
 #wrapper {
     position: relative;
     width: 100%;
     overflow: hidden;
 }
+
 .clock {
     position: absolute;
     top: 50%;
@@ -26,6 +29,7 @@ body {
     background: url(./images/clockface.jpg);
     background-size: cover;
 }
+
 .clock:before {
     content: '';
     position: absolute;
@@ -38,26 +42,41 @@ body {
     animation: animate 4s linear infinite;
     transform-origin: left;
 }
+
 .second {
-display: block;
-position: absolute;
-top: 50%;
-left: 50%;
-transform: translate(-50%,-50%);
-width: 10px;
-height: 10px;
-background: red;
-border-radius: 50%;
-z-index: 1;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 10px;
+    height: 10px;
+    background: red;
+    border-radius: 50%;
+    z-index: 1;
 }
+
+.hand {
+    position: absolute;
+    top: 5%;
+    left: 49%;
+    width: 4px;
+    height: 89px;
+    margin-top: 20px;
+    border-radius: 41px;
+    background: #f00;
+}
+
 @keyframes animate {
     0% {
         transform: rotate(-90deg);
     }
+
     100% {
         transform: rotate(270deg);
     }
 }
+
 .clock::after {
     content: '';
     position: absolute;
